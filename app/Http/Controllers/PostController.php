@@ -34,6 +34,12 @@ class PostController{
     public function update(SavePostRequest $request, Post $post){   
         $post->update($request->validated());
 
-        return to_route('posts.show', $post)->with('status', 'Post update!');
+        return to_route('posts.show', $post)->with('status', 'Post updated!');
+    }
+
+    public function destroy(Post $post){
+        $post->delete();
+
+        return to_route('posts.index')->with('status', 'Post deleted!');
     }
 }
