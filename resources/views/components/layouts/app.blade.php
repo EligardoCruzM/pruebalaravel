@@ -8,7 +8,12 @@
     <meta name="description" content="{{ $metaDescription ?? 'Default meta description' }}">
 </head>
 <body>
-    <x-layouts.navigation />
+    <x-layouts.navigation /> 
+    @if(session('status'))
+        <div class>
+            {{ session('status') }}
+        </div>
+    @endif
     {{ $slot }}
 </body>
 </html>
