@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> {{ $title ?? 'Prueba' }} </title>
     <meta name="description" content="{{ $metaDescription ?? 'Default meta description' }}">
+    @vite(['resources/js/app.js', 'resources/css/app.scss'])
 </head>
 <body>
     <x-layouts.navigation /> 

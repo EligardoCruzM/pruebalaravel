@@ -24,7 +24,7 @@ class PostController{
     public function store(SavePostRequest $request){
         Post::create($request->validated());
 
-        return to_route('posts.index')->fwith('status', 'Post created!');
+        return to_route('posts.index')->with('status', 'Post created!');
     }
 
     public function edit(Post $post){
